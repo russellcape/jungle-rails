@@ -51,6 +51,7 @@ main section.categories-show {
         font-size: 1em;
         color: white;
         font-weight: bold;
+        transition: all 0.3s;
       }
 
       aside.price {
@@ -70,6 +71,10 @@ main section.categories-show {
 
         footer {
           opacity: 1.0;
+        }
+
+        aside.sold-out {
+          background-color: #CD1127;
         }
       }
 

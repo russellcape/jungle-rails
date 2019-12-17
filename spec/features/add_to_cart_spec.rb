@@ -24,7 +24,7 @@ RSpec.feature "Visitor add products to cart from home page", type: :feature, js:
     first('.product').click_button('Add')
 
     # DEBUG
-    save_screenshot
+    save_screenshot "Add_to_cart.png"
 
     # VERIFY
     expect(page).to have_content('My Cart (1)')

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
   describe 'Validations' do
 
-    it 'should create new product if it passes all the validations' do
+    it 'should create new product, in the database, if it passes all the validations' do
       @category = Category.create(name:"Sporting Goods")
       @product = Product.new(
         name: "Armada Invictus 89 Ti",
@@ -62,6 +62,6 @@ RSpec.describe Product, type: :model do
       @product.errors.full_messages
       expect(@product).to_not (be_valid)
     end
-    
+
   end
 end

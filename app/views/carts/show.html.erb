@@ -12,7 +12,7 @@
           <th colspan="2">Product</th>
           <th>Unit Price</th>
           <th>Quantity</th>
-          <th>Price</th>
+          <th>Subtotal</th>
         </tr>
       </thead>
       <tbody>
@@ -26,7 +26,12 @@
             TOTAL:
           </th>
           <th>
-            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
+            <% if @sales %>
+              <% percent_off = (@sales.percent_off / 100.00) %>
+              <%= humanized_money_with_symbol cart_subtotal_cents / 100.00 * (1 - percent_off) %>
+            <% else %>
+              <%= humanized_money_with_symbol cart_subtotal_cents / 100.00 %>
+            <% end %>
           </th>
         </tr>
       </tfoot>

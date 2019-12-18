@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
 
   def show
+    @sales = Sale.active.first
   end
 
   def add_item

@@ -132,5 +132,28 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## SALES
+
+Sale.create!({
+  name: 'Christmas',
+  percent_off: 45,
+  starts_on: '2019-12-12',
+  ends_on: '2020-01-03',
+})
+
+Sale.create!({
+  name: 'Spring Break',
+  percent_off: 25,
+  starts_on: '2020-03-04',
+  ends_on: '2020-03-18',
+})
+
+Sale.create!({
+  name: 'Back to School',
+  percent_off: 15,
+  starts_on: '2020-08-05',
+  ends_on: '2020-09-08',
+  
+})
 
 puts "DONE!"

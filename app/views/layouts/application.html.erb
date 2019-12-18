@@ -13,8 +13,11 @@
   <main class="container">
   <% if active_sale?%>
   <p class="alert alert-info">
-    There's an active <%= %> sale going on!
-    Everything is <strong><%=  %>% off!</strong>
+  <%# <%= debug Sale.active%>
+  <%Sale.active.each do |sale|%>
+    There's an active <%= sale.name %> sale going on!
+    <strong>Everything is <%= sale.percent_off %>% off!</strong>
+  <% end %>
   </p>
   <% end %>
   <%= yield %>
